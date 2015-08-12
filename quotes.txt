@@ -1,0 +1,3 @@
+"Every reader should ask himself periodically 'Toward what end, toward what end?' -- but do not ask it too often lest you pass up the fun of programming for the constipation of bittersweet philosophy." - Pg xvi
+
+"It is better to have 100 functions operate on one data structure than to have 10 functions operate on 10 data structures." - Pg xvii
