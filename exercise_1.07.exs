@@ -1,5 +1,5 @@
-defmodule Exercise_1_7 do
-  def sqrt(x) do
+defmodule SquareRoot do
+  def of(x) do
     sqrt_iter(1.0, x)
   end
 
@@ -24,5 +24,16 @@ defmodule Exercise_1_7 do
     else
       sqrt_iter(improve(guess, x), x)
     end
+  end
+end
+
+ExUnit.start
+
+defmodule SquareRootTests do
+  use ExUnit.Case, async: true
+
+  test "it calcs square roots within a threshold" do
+    assert abs(SquareRoot.of(4) - 2) < 0.0000001
+    assert abs(SquareRoot.of(100) - 10) < 0.0000001
   end
 end
