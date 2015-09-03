@@ -10,3 +10,13 @@ defmodule NewIf do
     end
   end
 end
+
+ExUnit.start
+
+defmodule NewIfTests do
+  use ExUnit.Case, async: true
+
+  test "it evaluates the then clause if predicate is true" do
+    new_if 1 == 1, assert(true == true), assert(false == false)
+  end
+end
