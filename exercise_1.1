@@ -1,0 +1,27 @@
+Sequence of expressions:
+Scheme | Elixir | Result
+10 | 10 | 10
+(+ 5 3 4) | 5 + 3 + 4 | 12
+(- 9 1) | 9 - 1 | 8
+(/ 6 2) | div(6, 2) | 3 # Using div here to return an int, matching Scheme
+(+ (* 2 4) (- 4 6)) | 2 * 4 + 4 - 6 | 6 |
+(define a 3) | a = 3 | 3
+(define b (+ a 1)) | b = a + 1 | 4
+(+ a b (* a b)) | a + b + a * b | 19
+(= a b) | a == b | false
+(if (and (> b a) (< b (* a b))) | if (b > a) && (b < (a * b)) do | 4
+    b                           |   b
+    a)                          | else
+                                |   a
+                                | end
+(cond ((= a 4) 6)               | cond do               | 16
+      ((= b 4) (+ 6 7 a))       |   a == 4 -> 6
+      (else 25))                |   b == 4 -> 6 + 7 + a
+                                |   true -> 25
+                                | end
+(+ 2 (if (> b a) b a)) | 2 + if (b > a) do b else a end | 6
+(* (cond ((> a b) a) | cond do       | 16
+         ((< a b) b) |   a > b -> a
+         (else -1))  |   a < b -> b
+    (+ a 1))         |   true -> -1
+                     |  end * (a + 1)
