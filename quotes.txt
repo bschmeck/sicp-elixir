@@ -1,3 +1,5 @@
 "Every reader should ask himself periodically 'Toward what end, toward what end?' -- but do not ask it too often lest you pass up the fun of programming for the constipation of bittersweet philosophy." - Pg xvi
 
 "It is better to have 100 functions operate on one data structure than to have 10 functions operate on 10 data structures." - Pg xvii
+
+"In testing primality of very large numbers chosen at random, the chance of stumbling upon a value that fools the Fermat test is less than the chance that cosmic radiation will cause the computer to make an error in carrying out a 'correct' algorithm. Considering an algorithm to be inadequate for the first reason but not for the second illustrates the difference between mathematics and engineering." - Pg 69 (Footnote 47)
