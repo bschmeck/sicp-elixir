@@ -1,7 +1,13 @@
 defmodule Fringe do
-  def of([]), do: []
-  def of([head | tail]) when is_list(head), do: of(head) ++ of(tail)
-  def of([head | tail]), do: [ head | of(tail) ]
+  def of(tree), do: reverse(of(tree, []))
+  
+  defp of([], fringe), do: fringe
+  defp of([head | tail], fringe) when is_list(head), do: of(tail, of(head, fringe))
+  defp of([head | tail], fringe), do: of(tail, [head | fringe])
+
+  defp reverse(items), do: reverse(items, [])
+  defp reverse([], reversed), do: reversed
+  defp reverse([head | tail], reversed), do: reverse(tail, [head | reversed])
 end
 
 ExUnit.start
